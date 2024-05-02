@@ -1,0 +1,93 @@
+DIFERENÇAS ENTRE NoSQL E SQL
+
+NoSQL
+1º Armazena os dados em coleções de documentos, com campos e subdocumentos.
+2º A curva de aprendizagem é menor.
+3º Não possuem relacionamentos entre as coleções e/ou documentos.
+
+SQL
+1º Armazenam os dados em tabelas, com linhas divididas em colunas.
+2º A curva de aprendizagem é menor.
+3º Possuem relacionamento entre as diferentes tabelas e registros.
+
+QUANDO USAR O MongoDB?
+
+º IOT
+º Mobile
+º Real-Time Analytics
+Sistemas de estatísticas em tempo real.
+º Catalog
+Catálogo de produtos em um e-commerce.
+
+QUANDO NÂO USAR?
+
+Quando relacionamentos entre diversas entidades são importantes, e precisam,
+ser feitas para que o sistema funcione de forma correta (Não recomendado,
+mas é possível utilizá-lo).
+
+PONTOS A SE LEMBRAR
+
+- MongoDB armazena os dados em formato JSON/BSON.
+
+- MongoDB foi criada com Big Data em mente.
+Ele suporta tanto escalonamento horizontal quanto vertical usando replica sets (instâncias espelhadas) e
+sharding (dados distribuídos), tornando-o uma opção muito interessante para grandes volumes de dados,
+especialmente os desestruturados.
+
+- Schemaless.
+Os documentos BSON (JSON binário) do Mongo são schemaless e aceitam quase qualquer coisa que você quiser
+armazenar, sendo perfeito para trabalhar com JavaScript e NodeJS.
+
+- show dbs
+Mostra todos os banco de dados criados.
+
+- use meuBanco
+Cria se não existir e acessa o banco de dados em questão.
+
+- db
+Verifica e mostra em qual banco você está no momento.
+
+- show collections
+Mostra as coleções que existem nesse banco.
+
+- db.collection.insertOne({ nome: 'Gilmar', idade: 21 })
+Cria, se não existir, uma coleção de nome 'collection' e coloca apenas um 
+documento nela. Sempre terá um chave (nome) e o valor (Gilmar).
+
+- db.collection.insertMany(
+    [
+        {
+        nome: 'Gilmar',
+        idade: 21   
+        },
+        {
+        nome: 'Lauany',
+        idade: 19
+        }
+    ]
+    )
+Inserindo mais de um documento na coleção.
+
+- db.collection.find()
+Mostra todos os documentos criados nessa coleção.
+
+- db.collection.find(
+    { 
+        nome: { 
+            $regex: /a/i  
+         } 
+    }
+    )
+Procura e mostra todos os documentos que possuam a letra 'a' no campo nome.
+
+- db.collection.find(
+    { 
+        idade: { 
+            $gte: 35
+         } 
+    }
+    )
+Procura e mostra todos os documentos que tenham o campo idade com o valor maior
+igual á 35.
+
+Parei no slaide 19.
