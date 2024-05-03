@@ -68,6 +68,22 @@ documento nela. Sempre terá um chave (nome) e o valor (Gilmar).
     )
 Inserindo mais de um documento na coleção.
 
+- db.Alunos.updateOne({nome: "Lucas Pereira"}, {$set: {curso: "Desenvolvimento de Software Multiplataforma"}})
+Atualizar um documento já existente, criando um novo campo.
+
+- db.Alunos.updateOne({nome: "Thiago Oliveira"}, {$push: {disciplina: "Física Geral II"}})
+Incrementar um valor a um array já existente no documento.
+
+- db.Alunos.deleteOne({curso: "Design Gráfico"})
+Excluir um documento.
+
+- db.Alunos.aggregate({$group: {_id: null, idadeMediaAlunos: {$avg: "$idade"}}})
+Pipeline de agregação, vai agrupar todos os alunos por idade e calcular a média
+dessas idades.
+
+- db.Alunos.createIndex({nome: "text"}, {name: "idxNome"})
+Cria um index de texto no campo nome.
+
 - db.collection.find()
 Mostra todos os documentos criados nessa coleção.
 
@@ -90,4 +106,119 @@ Procura e mostra todos os documentos que possuam a letra 'a' no campo nome.
 Procura e mostra todos os documentos que tenham o campo idade com o valor maior
 igual á 35.
 
-Parei no slaide 19.
+- Além do $regex e do $gte, temos também:
+
+$eq -> igual á (==)
+$ne -> diferente de (!=)
+$gt -> maior do que (>)
+$lt -> menor do que (<)
+$lte -> menor do que ou igual (<=)
+$in -> Ele seleciona os documentos onde o valor dos campos é igual a qualquer
+valor no array especificado.
+
+    Por exemplo:
+
+    db.inventory.insertMany([
+    { "item": "Pens", "quantity": 350, "tags": [ "school", "office" ] },
+    { "item": "Erasers", "quantity": 15, "tags": [ "school", "home" ] },
+    { "item": "Maps", "tags": [ "office", "storage" ] },
+    { "item": "Books", "quantity": 5, "tags": [ "school", "storage", "home" ] }
+    ])
+
+    Utilizando o comando 'db.inventory.find( { quantity: { $in: [ 5, 15 ] } }, { _id: 0 } )',
+    com o operador $in o que irá retornar é:
+
+    { item: 'Erasers', quantity: 15, tags: [ 'school', 'home' ] },
+    { item: 'Books', quantity: 5, tags: [ 'school', 'storage', 'home' ] }
+
+$all -> Ele seleciona os documentos onde o valor dos campos é um array que
+contem todos os elementos que foram passados na expressão.
+
+    Por exemplo:
+
+    {
+   _id: ObjectId("5234cc89687ea597eabee675"),
+   code: "xyz",
+   tags: [ "school", "book", "bag", "headphone", "appliance" ],
+   qty: [
+          { size: "S", num: 10, color: "blue" },
+          { size: "M", num: 45, color: "blue" },
+          { size: "L", num: 100, color: "green" }
+        ]
+    }
+
+    {
+    _id: ObjectId("5234cc8a687ea597eabee676"),
+    code: "abc",
+    tags: [ "appliance", "school", "book" ],
+    qty: [
+            { size: "6", num: 100, color: "green" },
+            { size: "6", num: 50, color: "blue" },
+            { size: "8", num: 100, color: "brown" }
+            ]
+    }
+
+    {
+    _id: ObjectId("5234ccb7687ea597eabee677"),
+    code: "efg",
+    tags: [ "school", "book" ],
+    qty: [
+            { size: "S", num: 10, color: "blue" },
+            { size: "M", num: 100, color: "blue" },
+            { size: "L", num: 100, color: "green" }
+            ]
+    }
+
+    {
+    _id: ObjectId("52350353b2eff1353b349de9"),
+    code: "ijk",
+    tags: [ "electronics", "school" ],
+    qty: [
+            { size: "M", num: 100, color: "green" }
+            ]
+    }
+
+    Utilizando o comando 'db.inventory.find( { tags: { $all: [ "appliance", "school", "book" ] } } )',
+    o valor que será retornado é: 
+
+    {
+   _id: ObjectId("5234cc89687ea597eabee675"),
+   code: "xyz",
+   tags: [ "school", "book", "bag", "headphone", "appliance" ],
+   qty: [
+          { size: "S", num: 10, color: "blue" },
+          { size: "M", num: 45, color: "blue" },
+          { size: "L", num: 100, color: "green" }
+        ]
+    }
+
+    {
+    _id: ObjectId("5234cc8a687ea597eabee676"),
+    code: "abc",
+    tags: [ "appliance", "school", "book" ],
+    qty: [
+            { size: "6", num: 100, color: "green" },
+            { size: "6", num: 50, color: "blue" },
+            { size: "8", num: 100, color: "brown" }
+            ]
+    }
+
+$or -> Permite que você crie mais de um filtro para seu find, podendo ser completamente diferente um do
+outro e serão retornados os documentos que atendam qualquer um deles ou até mesmo os dois.
+$nor -> Que é o contrário do $or.
+$not -> Que é uma negação.
+skip() -> Pula a quantidade de documentos que forem especificados.
+limit() -> Limita a listagem á quantidade de documentos que forem especificados.
+sort() -> Ordenar por ordem crescente ou descrecente todos os documentos com a chave e o valo em questao.
+
+    Exemplo:
+
+    db.collection.find().sort({ idade: 1 })
+
+    Assim estamos dizendo á listagem para ordenar os documentos pela idade, em ordem crescente.
+
+    db.collection.find().sort({ idade: -1 })
+    
+    E assim em ordem descrecente.
+
+count() -> Retorna a quantidade de documentos que será retornada na consulta.
