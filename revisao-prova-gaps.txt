@@ -1,0 +1,192 @@
+Introdução ao UML (Unified Modeling Language ou Linguagem de Modelagem Unificada).
+
+    Diagramas UML
+
+    Existem duas categorias: Estruturais e comportamentais.
+
+    Estruturais - Documenta a organização física, como um objeto irá se relacionar
+    com outro.
+
+    Comportamentais - O foco é no comportamento dos elementos do sistema (documenta
+    requisitos, as ações e alterações nos elementos).
+
+    - ESTRUTURAL
+    
+    Diagrama de Classe
+    Utilizam classes e interfaces para documentar as entidades que formam 
+    o sistema e as relações estáticas delas. Podem ser depurados e aptos para
+    gerar código fonte, além de esboços rápidos em quadros brancos.
+
+    Diagrama de Objetos
+    Utilizam a mesma sintaxe dos diagramas de classe e mostram como as etapas reais
+    de classe são relacionadas em um momento específico. Mostra as relações dentro do sistema
+    em um momento específico.
+
+    - COMPORTAMENTAL
+
+    Diagrama de caso de uso
+    Documenta os requisitos funcionais de um sistema. Fornece uma visão independente 
+    da implementação dessas funções, e do que o sistema deve realizar de fato, o foco
+    com os casos de uso é o usuário e em suas necessidades. O que importa é o que o
+    cliente precisa que seja feito, e não como será feito.
+
+Introdução ao Projetos
+
+    O que é um projeto?
+    Um projeto é um esforço temporário com um objetivo específico, que geralmente
+    envolve a criação de um produto ou serviço. Tem ínicio e fim definidos.
+
+    O que são atividades contínuas?
+    Atividades continuadas, sem prazo de término. Exemplo: Atividades em aeroporto,
+    estações de metro, fabricação de remédios, manutenção de sistemas/serviços e
+    atualizações de software.
+
+    Singularidade dos Projetos
+
+        Produção por processos:
+        Sabonetes, bebidas
+
+        Produção seriada:
+        Automóveis, peças e armas
+
+        Ordens de serviço:
+        Produção unitária de produtos e serviços
+
+        Projetos recorrentes:
+        Contrução civil, campeonatos de futebol e campanhas publicitárias
+
+        Projetos inovadores:
+        Pesquisa, exploração e produção cinematográfica
+
+    Resultado singular
+    Todo projeto tem por objetivo fornecer um produto singular, chamado de
+    entrega ou entregável. Esses entregáveis possuem 4 categorias:
+
+        Produtos físicos
+        Entidades tangíveis. Exemplos: Edíficios, Rodovias, Pontes, Residências e
+        Sistemas de transporte.
+
+        Conceitos, conhecimentos e informações
+        ideias, entidades intangíveis. Exemplos: Roteiros de filmes, Peças teatrais, Desenhos,
+        Sistemas de informação e Maquetes.
+
+        Eventos e Serviços
+        Sequência de atividades que configuram o fornecimento de um serviço ou evento. Exemplos: Feiras,
+        Conferências, Copa do Mundo, Competições e Congressos.
+
+        Intituições e Organizações
+        Projetos de criação, desenvolvimento ou mudança de entidades organizacionais. Exemplos: Empresas,
+        Comunidades, Mercosul, União Européia e Legislação.
+
+    Portfólio
+    Ou carteira, é o conjunto dos projetos realizados pela organização.Toda organização tem um.
+    Contudo, nem todas fazem a gestão adequada deles. Pois isso implica formalizar processos de
+    avaliação, seleção, priorização e autorização para execução.
+    Há vários tipos de portfólio:
+
+        P&D - Pesquisa e Desenvolvimento
+        TI - Tecnologia da Informação
+        Eficiência
+
+    Niveis de Desempenho
+    São divididos em 5 níveis: 1, 2, 3, 4 e 5.
+
+    1 e 2
+    Projeto
+        1 - Sucesso do processo (Sucesso medido pelo uso correto das ferramentas da gestão de projetos e pela escolha do projeto)
+        2 - Sucesso da gestão do projeto (Medido pelas principais variáveis da gestão: escopo, tempo e custo)
+
+    3
+    Produto
+        Sucesso do entregável (Mede pela conformidade do produto com o que foi proposto e pela satisfação do cliente)
+
+    4 e 5
+    Benefício organizacional
+        4 - Sucesso para o negócio (Pelo retorno sobre o investimento e pela realização das expectativas que motivaram o investimento do projeto)
+        5 - Sucesso estratégico (Posição no mercado, crescimento dos negócios, vantagens competitivas e outros benefícios)
+
+Gestão de Projetos
+
+    A gestão de um projeto é o processo de plaenjar, organizar, executar e controlar. Conjunto
+    de técnicas que se aplica a determinadas situações, as quais tem como objetivo gerar um produto
+    dentro das restrições de tempo e custo.
+
+    Planejar
+
+        - Justificativas
+        - Escopo do projeto
+        - Estimativa de custo e tempo (recursos)
+
+    Organizar e mobilizar
+
+        - Equipe e organização
+        - Instalações
+        - Serviços
+        - Infraestrutura
+
+    executar
+
+        - Acionar recursos
+        - Dirigir o trabalho
+        - Avaliar e controlar o desempenho
+
+    Encerrar
+
+        - Entregar resultado
+        - Fechar as contas
+        - Relatórios finais
+        - Desmobilizar equipe
+
+    Funções do processo gerencial
+    Conhecimento, escopo, tempo, recurso e custo, qualidade, riscos, stakeholders.
+
+Gestão de Entregas
+
+    O que é escopo?
+    O escopo é o conjunto de entregáveis (produto principal e os elementos de apoio, eles
+    viabilizam o produto principal), ou em outras palavras, é o produto ou o conjunto
+    de produtos que o projeto deve entregar ao cliente, patrocinador ou usuário.
+
+Atividades e cronograma
+
+    Quando as atividades que precisam ser realizadas são organizadas em uma lista,
+    essa ordem não é linear. A ordem é baseada nas dependências, o que precisa ser feito
+    primeiro, que não dependa de outras atividades. Conforme a lista vai se montando, a ultima tarefa
+    depende de que todas as demais antes dele sejam feitas primeiro, para que ela possa
+    ser feita.
+
+SCRUM
+
+    Ciclo do SCRUM
+
+    1) Ideia - 2) Requisitos do Produto - 3) Sprint Planning 1 - 4) Selecionar requisitos de produto - 5) Sprint Planning 2
+    6) Sprint backlog - 7) Sprint - 8) Nova funcionalidade - 9) Retrospectiva
+
+    2) Data de entrega do produto definida, componentes do sistema
+    são priorizados, custo e riscos são estimados e cliente participa.
+
+    3) Ciclo iterativo, 1 a 4 semanas de duração, uma parte dos requisitos
+    é selecionada para fazer parte do sprint atual (sprint backlog), durante
+    o sprint nenhuma funcionada será adicionada, as funcionalidades do sprint
+    backlog podem ser alteradas ou atualizadas.
+
+    4) Product backlog (Todos participam)
+
+    5) Sprint backlog (Cliente não participa)
+
+    - Framework de gestão de projetos, possui uma abordagem iterativa e incremental.
+    - Ideal para projetos complexos, com objetivo bem definido.
+    - Mais utilizado no mundo.
+    - Não há prática de engenharia pré-definida.
+    - Conjunto de práticas e papéis pré-definidos.
+    - Sprints (iterações) = é o tempo em que determinada quantidade de atividades
+    precisa ser realizada.
+    - Backlog = São os requisitos.
+    - Papeis = Dono do produto (Product Owner), Scrum Master (Lider) e Equipe/Usuários (Stakeholders)
+    - Product Owner = Define e prioriza as funcionalidades do produto, visão de negócios,
+    aceita ou rejeita os resultados do projeto, Cliente + Analista de Requisitos.
+    - Scrum Master = Facilitador, remove obstáculos do time e assegura que as práticas
+    estão sendo executadas corretamente, escudo contra interferências externas.
+    - Daily SCRUM = Time + Scrum Master, reunião curta (15min), Scrum Master faz
+    perguntas aos membros do time.
+    - Reflection/Retrospectiva = 30 dias.
